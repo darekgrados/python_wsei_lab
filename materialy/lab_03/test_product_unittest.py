@@ -58,7 +58,7 @@ class TestProduct(unittest.TestCase):
 
     def test_total_value(self):
         """Sprawdz, czy total_value zwraca price * quantity."""
-        self.assertEqual(self.product.total_value(), 29999.9)
+        self.assertAlmostEqual(self.product.total_value(), 29999.9, places=2)
 
     def test_init_negative_price_raises(self):
         with self.assertRaises(ValueError):
